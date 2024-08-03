@@ -13,7 +13,7 @@ Simple reader for the Orthodox Prayer Book, developed using Expo.
 2. Start the app
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
 ## Learn more
