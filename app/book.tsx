@@ -7,6 +7,7 @@ import ChapterHeader from '@/components/ChapterHeader';
 import SectionHeader from '@/components/SectionHeader';
 import { Colors } from '@/constants/Colors';
 import { Style } from '@/constants/Style';
+import Footer from '@/components/Footer';
 
 function renderItem(item: any[]): JSX.Element {
     const [type, id, content] = item;
@@ -38,11 +39,15 @@ export default function Book() {
     }
 
     return (
-        <FlatList
-            style={[Style.contentContainer, { backgroundColor: isDarkMode ? Colors.dark.background : Colors.light.background }]}
-            data={BookData[index]}
-            renderItem={({ item }) => renderItem(item)}
-            keyExtractor={(item: any[]) => item[1]}
-        />
+        <View>
+            <FlatList
+                style={[Style.contentContainer, { backgroundColor: isDarkMode ? Colors.dark.background : Colors.light.background }]}
+                data={BookData[index]}
+                renderItem={({ item }) => renderItem(item)}
+                keyExtractor={(item: any[]) => item[1]}
+                ListFooterComponent={<Footer />}
+            />
+        </View>
+
     );
 }

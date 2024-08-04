@@ -22,6 +22,8 @@ export default function RootLayout() {
 
   const [loaded, error] = useFonts({
     'TriodionUcs': require('../assets/fonts/triodion_ucs.ttf'),
+    'Verdana': require('../assets/fonts/Verdana.ttf'),
+    'OfficinaSansBookC': require('../assets/fonts/OfficinaSansBookC.ttf'),
   });
 
   useEffect(() => {
@@ -61,6 +63,7 @@ export default function RootLayout() {
         }}>
           <Stack.Screen name="index" options={{ title: 'Оглавление' }} />
           <Stack.Screen name="book" options={{ title: 'Молитвослов' }} />
+          <Stack.Screen name="about" options={{ title: 'О приложении' }} />
         </Stack>
 
       </View>
